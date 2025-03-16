@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>URL Safety Checker</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/up.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <i class="fas fa-shield-alt"></i>
+        <h1>URL Safety Checker</h1>
+      </div>
+      <button class="toggle-dark" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+      </button>
+    </header>
+
+    <div class="intro-text">
+      <p>Enter a URL below to quickly analyze its safety!<br>(If possible, please use https://)</p>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="urlInput" placeholder="Enter URL to analyze..." />
+      <i class="fas fa-link"></i>
+    </div>
+
+    <button onclick="checkUrl()">
+      <i class="fas fa-search"></i> Analyze URL
+    </button>
+
+    <div id="result"></div>
+
+    <section class="history">
+      <h2>History</h2>
+      <ul class="history-list" id="historyList"></ul>
+      <button class="clear-history" onclick="clearHistory()">Clear History</button>
+    </section>
+
+    <footer>
+      <p>Powered by AI • Scan URLs before you click</p>
+    </footer>
+  </div>
+
+  <script src="/up.js"></script>
+</body>
+</html>
